@@ -5,9 +5,33 @@
   <title>Web Sprint 2 Challenge</title>
   <script id="challenge">
     // 👉 CHALLENGE 1
-    function profileActivation(profile, reason) {
-
+    let testProfile = {
+      active: false,
+      reason: "because"
     }
+
+    function profileActivation(profile, reason){
+      let updatedProfile = {}
+        if (testProfile.active === true && reason === "because"){
+        updatedProfile.active = false;
+        updatedProfile.reason = reason
+      } else if (testProfile.active === false && testProfile.reason === "because"){
+        delete reason
+        updatedProfile.active = true
+      } else if (testProfile.active === true && !reason){
+        return "confirm status manually"
+      }return updatedProfile 
+      
+    }
+      
+    
+    
+    let result = profileActivation(testProfile);
+    console.log(result); 
+      //1. If the input profile is **active**, set it to **inactive** and assign the provided `reason` to the profile. The updated profile should be returned.
+      //2. If the input profile is **inactive**, set it to **active** and remove the `reason` property from the profile. The updated profile should be returned.
+      //3. If a profile passed in is active and no `reason` is provided, return `"confirm status manually"` and do not modify the profile. 
+    
 
     // 👉 CHALLENGE 2
     function mineSweeper(grid, x, y) {
