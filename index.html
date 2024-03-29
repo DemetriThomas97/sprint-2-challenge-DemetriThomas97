@@ -6,8 +6,8 @@
   <script id="challenge">
     // 👉 CHALLENGE 1
     let testProfile = {
-      active: false,
-      reason: "because"
+      active: true,
+      //reason: "because"
     }
 
     function profileActivation(profile, reason){
@@ -26,7 +26,7 @@
       
     
     
-    let result = profileActivation(testProfile);
+    let result = profileActivation(testProfile, "because");
     console.log(result); 
       //1. If the input profile is **active**, set it to **inactive** and assign the provided `reason` to the profile. The updated profile should be returned.
       //2. If the input profile is **inactive**, set it to **active** and remove the `reason` property from the profile. The updated profile should be returned.
